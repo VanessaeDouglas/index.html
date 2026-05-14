@@ -165,6 +165,32 @@
       margin-top: 4px;
       animation: floatBalloons 2.5s ease-in-out infinite alternate-reverse;
     }
+
+    /* ── BBQ Button ── */
+    .bbq-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 24px rgba(238,9,121,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .bbq-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px rgba(255,106,0,0.6);
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 24px rgba(238,9,121,0.45); }
+      50%       { box-shadow: 0 4px 40px rgba(255,106,0,0.8);  }
+    }
   </style>
 </head>
 <body>
@@ -189,6 +215,8 @@
     </div>
 
     <div class="party-row">🎂 🥳 🎁</div>
+
+    <a class="bbq-btn" href="churrasco.html">🔥 Clique aqui pra uma surpresa! 🍖</a>
   </div>
 
   <script>
