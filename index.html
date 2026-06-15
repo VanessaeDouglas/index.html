@@ -1,239 +1,293 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parabéns Douglas! 🎉</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanessa & Douglas | Lista de Casamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Gerais e Cores Base */
+        :root {
+            --verde-escuro: #4A5D4E;
+            --verde-claro: #F4F6F4;
+            --texto-escuro: #333333;
+            --texto-secundario: #666666;
+            --borda: #E0E5E0;
+            --branco: #FFFFFF;
+        }
 
-    body {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      background: linear-gradient(135deg, #1a0533 0%, #3b0764 40%, #1a0533 100%);
-      font-family: 'Nunito', sans-serif;
-      overflow: hidden; position: relative;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--verde-claro);
+            color: var(--texto-escuro);
+            display: flex;
+            justify-content: center;
+        }
 
-    .confetti-wrap { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-    .confetti {
-      position: absolute; width: 10px; height: 14px;
-      border-radius: 2px; opacity: 0; animation: fall linear infinite;
-    }
-    @keyframes fall {
-      0%   { transform: translateY(-20px) rotate(0deg);   opacity: 1; }
-      100% { transform: translateY(110vh) rotate(720deg); opacity: 0.3; }
-    }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--branco);
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
 
-    .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-    .star {
-      position: absolute; width: 4px; height: 4px;
-      background: #fff; border-radius: 50%;
-      animation: twinkle ease-in-out infinite alternate;
-    }
-    @keyframes twinkle {
-      from { opacity: 0.2; transform: scale(0.8); }
-      to   { opacity: 1;   transform: scale(1.4); }
-    }
+        /* Cabeçalho */
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--verde-escuro);
+            margin: 0;
+            font-weight: 400;
+        }
 
-    .card {
-      position: relative; z-index: 10;
-      background: rgba(255,255,255,0.07);
-      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.18); border-radius: 32px;
-      padding: 48px 56px; text-align: center;
-      max-width: 480px; width: 90%;
-      box-shadow: 0 8px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
-      animation: popIn 0.8s cubic-bezier(0.34,1.56,0.64,1) both;
-    }
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(0.7) translateY(40px); }
-      to   { opacity: 1; transform: scale(1)   translateY(0);    }
-    }
+        header .subtitulo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--texto-secundario);
+            margin: 10px 0;
+        }
 
-    .balloons {
-      display: flex; justify-content: center; gap: 12px;
-      margin-bottom: 20px; font-size: 2rem;
-      animation: floatBalloons 3s ease-in-out infinite alternate;
-    }
-    @keyframes floatBalloons {
-      from { transform: translateY(0); }
-      to   { transform: translateY(-10px); }
-    }
+        header .divisor {
+            color: var(--verde-escuro);
+            margin: 15px 0 30px 0;
+            font-size: 1.2rem;
+        }
 
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.15;
-      background: linear-gradient(90deg, #ffd700, #ff6eb4, #ffd700, #a78bfa);
-      background-size: 300% auto;
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; animation: shimmer 3s linear infinite;
-      margin-bottom: 8px; filter: drop-shadow(0 0 18px rgba(255,214,0,0.45));
-    }
-    @keyframes shimmer {
-      0%   { background-position: 0%   center; }
-      100% { background-position: 300% center; }
-    }
+        /* Seção do PIX */
+        .pix-container {
+            background-color: var(--verde-claro);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            border: 1px solid var(--borda);
+            text-align: left;
+        }
 
-    .subtitle {
-      color: rgba(255,255,255,0.65); font-size: 1rem;
-      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px;
-    }
+        .pix-texto h3 {
+            margin: 0 0 5px 0;
+            color: var(--texto-escuro);
+            font-size: 1.1rem;
+        }
 
-    .photo-wrap { position: relative; display: inline-block; margin-bottom: 28px; }
-    .photo-ring {
-      position: absolute; inset: -8px; border-radius: 50%;
-      background: conic-gradient(#ffd700, #ff6eb4, #a78bfa, #38bdf8, #ffd700);
-      animation: spinRing 4s linear infinite; z-index: -1;
-    }
-    @keyframes spinRing { to { transform: rotate(360deg); } }
-    .photo-ring::after {
-      content: ''; position: absolute; inset: 5px;
-      border-radius: 50%; background: #2a0550;
-    }
-    .photo-wrap img {
-      width: 180px; height: 180px; border-radius: 50%;
-      object-fit: cover; display: block; position: relative;
-      z-index: 1; border: 4px solid #2a0550;
-    }
+        .pix-texto p {
+            margin: 0;
+            color: var(--texto-secundario);
+            font-size: 0.9rem;
+        }
 
-    .party-row {
-      font-size: 1.5rem; letter-spacing: 6px; margin-top: 4px;
-      animation: floatBalloons 2.5s ease-in-out infinite alternate-reverse;
-    }
+        .btn-pix {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
 
-    .bbq-btn {
-      display: inline-block; margin-top: 28px; padding: 14px 28px;
-      background: linear-gradient(135deg, #ff6a00, #ee0979);
-      color: #fff; font-family: 'Nunito', sans-serif;
-      font-size: 1rem; font-weight: 700; border-radius: 50px;
-      text-decoration: none; letter-spacing: 0.05em;
-      box-shadow: 0 4px 24px rgba(238,9,121,0.45);
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    .bbq-btn:hover { transform: scale(1.07); box-shadow: 0 8px 32px rgba(255,106,0,0.6); }
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 4px 24px rgba(238,9,121,0.45); }
-      50%       { box-shadow: 0 4px 40px rgba(255,106,0,0.8);  }
-    }
+        .btn-pix:hover {
+            background-color: #38473B;
+        }
 
-    /* ── Botão Música ── */
-    #music-btn {
-      display: flex; align-items: center; justify-content: center;
-      margin: 20px auto 0 auto;
-      width: 58px; height: 58px; border-radius: 50%; cursor: pointer;
-      font-size: 1.6rem; background: rgba(255,255,255,0.13);
-      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-      border: 1.5px solid rgba(255,255,255,0.28);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      transition: transform 0.2s, background 0.2s;
-    }
-    #music-btn:hover { transform: scale(1.12); background: rgba(255,255,255,0.22); }
-    #music-btn.playing { animation: spinNote 3s linear infinite; }
-    @keyframes spinNote {
-      0%   { transform: rotate(0deg)   scale(1);   }
-      50%  { transform: rotate(180deg) scale(1.1); }
-      100% { transform: rotate(360deg) scale(1);   }
-    }
+        /* Seção de Título da Vitrine */
+        .vitrine-titulo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--texto-escuro);
+            margin-bottom: 5px;
+        }
 
-    #music-tip {
-      text-align: center; margin-top: 8px;
-      color: rgba(255,255,255,0.55); font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.05em; min-height: 18px;
-    }
+        .vitrine-subtitulo {
+            color: var(--texto-secundario);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
 
-    #yt-frame { position: fixed; top: -9999px; left: -9999px; width: 1px; height: 1px; }
-  </style>
+        /* Grade de Produtos (3 colunas no desktop, 1 no celular) */
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card-produto {
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: var(--branco);
+        }
+
+        .card-produto img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card-produto h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            margin: 0 0 5px 0;
+            color: var(--texto-escuro);
+            font-weight: 500;
+        }
+
+        .card-produto p {
+            color: var(--texto-secundario);
+            font-size: 0.85rem;
+            margin: 0 0 15px 0;
+        }
+
+        .btn-presente {
+            background-color: var(--branco);
+            color: var(--verde-escuro);
+            border: 1px solid var(--verde-escuro);
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-presente:hover {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid var(--borda);
+            padding-top: 30px;
+        }
+
+        footer p {
+            font-style: italic;
+            color: var(--texto-secundario);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .rodape-barra {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 15px;
+            font-size: 0.9rem;
+            margin: 20px -20px -40px -20px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="stars"        id="stars"></div>
-  <div class="confetti-wrap" id="confetti"></div>
-  <div id="yt-frame"></div>
+    <div class="container">
+        
+        <header>
+            <h1>Vanessa & Douglas</h1>
+            <div class="subtitulo">Lista de Casamento</div>
+            <div class="divisor">🌿 🤍 🌿</div>
+        </header>
 
-  <div id="yt-frame-unused"></div>
-  <div class="card">
-    <div class="balloons">🎈 🎉 🎈</div>
-    <h1>Parabéns,<br>Douglas!</h1>
-    <p class="subtitle">✨ Que este dia seja incrível ✨</p>
+        <div class="pix-container">
+            <div class="pix-texto">
+                <h3>Presentes em Dinheiro (PIX)</h3>
+                <p>Se preferir, você pode contribuir com qualquer valor via PIX.</p>
+            </div>
+            <button class="btn-pix" onclick="copiarPix()">Copiar Chave PIX</button>
+        </div>
 
-    <div class="photo-wrap">
-      <div class="photo-ring"></div>
-      <img src="images.jpg" alt="Foto do Douglas"
-           onerror="this.src='https://placehold.co/180x180/7c3aed/ffd700?text=😄'" />
+        <div class="vitrine-titulo">Escolha um presente</div>
+        <div class="vitrine-subtitulo">Clique em "Quero este presente" para reservar.</div>
+
+        <div class="produtos-grid">
+            
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Jogo de Lençol Casal">
+                <div>
+                    <h4>Jogo de Lençol Casal</h4>
+                    <p>Percal 200 fios - Verde</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Jogo de Panelas">
+                <div>
+                    <h4>Jogo de Panelas</h4>
+                    <p>Ceramic Life Granada Vanilla - 5 Peças</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Airfryer Oven">
+                <div>
+                    <h4>Airfryer Oven</h4>
+                    <p>12L Digital</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Aparelho de Jantar">
+                <div>
+                    <h4>Aparelho de Jantar</h4>
+                    <p>20 Peças</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Jogo de Copos">
+                <div>
+                    <h4>Jogo de Copos</h4>
+                    <p>6 Peças</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/200" alt="Liquidificador">
+                <div>
+                    <h4>Liquidificador</h4>
+                    <p>Turbo 900W</p>
+                </div>
+                <button class="btn-presente">Quero este presente</button>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Sua presença já é o nosso maior presente!<br>Obrigado por fazer parte deste momento especial.</p>
+            <div class="rodape-barra">Vanessa & Douglas 🤍</div>
+        </footer>
+
     </div>
 
-    <div class="party-row">🎂 🥳 🎁</div>
-    <a class="bbq-btn" href="churrasco.html">🔥 Clique aqui pra uma surpresa! 🍖</a>
-
-    <button id="music-btn" title="Ligar/Desligar música">🎵</button>
-    <p id="music-tip">🎵 Toca a música do Douglas!</p>
-  </div>
-
-  <script>
-    /* Stars */
-    const starsEl = document.getElementById('stars');
-    for (let i = 0; i < 80; i++) {
-      const s = document.createElement('div');
-      s.className = 'star';
-      s.style.left = Math.random() * 100 + 'vw';
-      s.style.top  = Math.random() * 100 + 'vh';
-      s.style.animationDuration = (1.5 + Math.random() * 3) + 's';
-      s.style.animationDelay    = (Math.random() * 4) + 's';
-      s.style.width = s.style.height = (2 + Math.random() * 4) + 'px';
-      starsEl.appendChild(s);
-    }
-
-    /* Confetti */
-    const confettiEl = document.getElementById('confetti');
-    const colors = ['#ffd700','#ff6eb4','#a78bfa','#38bdf8','#f97316','#34d399','#f43f5e'];
-    for (let i = 0; i < 60; i++) {
-      const c = document.createElement('div');
-      c.className = 'confetti';
-      c.style.left              = Math.random() * 100 + 'vw';
-      c.style.top               = '-20px';
-      c.style.background        = colors[Math.floor(Math.random() * colors.length)];
-      c.style.animationDuration = (4 + Math.random() * 6) + 's';
-      c.style.animationDelay    = (Math.random() * 8) + 's';
-      c.style.width             = (8 + Math.random() * 8) + 'px';
-      c.style.height            = (12 + Math.random() * 8) + 'px';
-      c.style.borderRadius      = Math.random() > 0.5 ? '50%' : '2px';
-      confettiEl.appendChild(c);
-    }
-
-    /* Música YouTube */
-    const btn     = document.getElementById('music-btn');
-    const tip     = document.getElementById('music-tip');
-    const wrap    = document.getElementById('yt-frame');
-    const VID     = '5A2it2DBEhM';
-    let playing   = false;
-    let iframe    = null;
-
-    setTimeout(() => { tip.style.display = 'none'; }, 4500);
-
-    btn.addEventListener('click', () => {
-      if (!playing) {
-        iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube.com/embed/${VID}?autoplay=1&loop=1&playlist=${VID}&controls=0`;
-        iframe.allow = 'autoplay';
-        iframe.setAttribute('allowfullscreen', '');
-        wrap.appendChild(iframe);
-        btn.textContent = '🔇';
-        btn.classList.add('playing');
-        tip.textContent  = '🎶 MC Gorila tocando!';
-        tip.style.display = 'block';
-        setTimeout(() => { tip.style.display = 'none'; }, 3000);
-        playing = true;
-      } else {
-        if (iframe) { wrap.removeChild(iframe); iframe = null; }
-        btn.textContent = '🎵';
-        btn.classList.remove('playing');
-        playing = false;
-      }
-    });
-  </script>
+    <script>
+        function copiarPix() {
+            const chavePix = "SUA_CHAVE_PIX_AQUI"; 
+            navigator.clipboard.writeText(chavePix);
+            alert("Chave PIX copiada com sucesso!");
+        }
+    </script>
 </body>
 </html>
