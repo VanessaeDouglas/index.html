@@ -22,7 +22,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: #F1F3F0; /* Cor leve para destacar o retângulo principal */
+            background-color: #F1F3F0; 
             display: flex;
             justify-content: center;
         }
@@ -36,15 +36,55 @@
             text-align: center;
             margin: 20px 0;
             border-radius: 16px;
-            overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+            overflow: hidden; 
             padding-bottom: 40px;
         }
 
-        /* BANNER DO TOPO AJUSTADO COM A SUA IMAGEM */
+        /* ÁREA DO BANNER COM TEXTO SOBREPOSTO */
+        .header-banner-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
         .banner-topo {
             width: 100%;
             display: block;
-            margin-bottom: 30px;
+        }
+
+        /* TEXTO DIGITAL POSICIONADO EXATAMENTE SOBRE O BANNER */
+        .texto-sobre-banner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .texto-sobre-banner h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5vw; /* Ajusta o tamanho da fonte proporcionalmente à tela */
+            max-font-size: 2.8rem;
+            color: var(--verde-escuro);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .texto-sobre-banner .subtitulo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2vw;
+            max-font-size: 1.8rem;
+            font-style: italic;
+            color: var(--texto-secundario);
+            margin-top: 3.5vw; /* Dá o espaço exato para pular a linha dourada */
+        }
+
+        /* Limitadores de tamanho para telas grandes (Computador) */
+        @media (min-width: 800px) {
+            .texto-sobre-banner h1 { font-size: 2.8rem; }
+            .texto-sobre-banner .subtitulo { font-size: 1.8rem; margin-top: 28px; }
         }
 
         .conteudo-interno {
@@ -190,10 +230,15 @@
 
     <div class="container">
         
-        <!-- SUA IMAGEM COMO BANNER DO TOPO DO RETÂNGULO -->
-        <img src="fundo.jpg" alt="Vanessa & Douglas" class="banner-topo">
+        <!-- Bloco do Banner com os Nomes Configurados por Cima -->
+        <div class="header-banner-container">
+            <img src="fundo.jpg" alt="Fundo Flores" class="banner-topo">
+            <div class="texto-sobre-banner">
+                <h1>Vanessa & Douglas</h1>
+                <div class="subtitulo">Lista de Casamento</div>
+            </div>
+        </div>
 
-        <!-- Área interna com as margens corretas para os elementos abaixo -->
         <div class="conteudo-interno">
 
             <!-- Bloco do PIX -->
