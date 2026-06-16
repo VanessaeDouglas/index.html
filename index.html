@@ -9,14 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos Gerais e Cores Base */
         :root {
             --verde-escuro: #4A5D4E;
             --verde-claro: #F4F6F4;
             --texto-escuro: #333333;
             --texto-secundario: #666666;
             --borda: #E0E5E0;
-            --branco: rgba(255, 255, 255, 0.95); /* Deixa o fundo levemente transparente */
+            --branco: rgba(255, 255, 255, 0.95); 
         }
 
         body {
@@ -27,13 +26,13 @@
             display: flex;
             justify-content: center;
             
-            /* CONFIGURAÇÃO DA IMAGEM DE FUNDO FIXA */
+            /* LIGAÇÃO DIRETA COM A SUA IMAGEM CARREGADA */
             background-image: url('fundo.jpg');
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: var(--verde-claro); /* Cor de segurança caso a imagem demore a carregar */
+            background-color: var(--verde-claro); 
         }
 
         .container {
@@ -44,12 +43,11 @@
             padding: 40px 20px;
             box-sizing: border-box;
             text-align: center;
-            backdrop-filter: blur(5px); /* Suaviza o fundo atrás do quadrado branco */
+            backdrop-filter: blur(5px); 
             margin: 20px 0;
             border-radius: 16px;
         }
 
-        /* Cabeçalho */
         header h1 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.8rem;
@@ -72,7 +70,6 @@
             font-size: 1.2rem;
         }
 
-        /* Seção do PIX */
         .pix-container {
             background-color: #F4F6F4;
             border-radius: 12px;
@@ -113,7 +110,6 @@
             background-color: #38473B;
         }
 
-        /* Seção de Título da Vitrine */
         .vitrine-titulo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
@@ -127,7 +123,6 @@
             margin-bottom: 30px;
         }
 
-        /* Grade de Produtos */
         .produtos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -183,7 +178,6 @@
             color: #FFFFFF;
         }
 
-        /* Rodapé */
         footer {
             margin-top: 40px;
             border-top: 1px solid var(--borda);
@@ -210,7 +204,6 @@
 <body>
 
     <div class="container">
-        
         <header>
             <h1>Vanessa & Douglas</h1>
             <div class="subtitulo">Lista de Casamento</div>
@@ -229,68 +222,42 @@
         <div class="vitrine-subtitulo">Clique em "Quero este presente" para reservar.</div>
 
         <div class="produtos-grid">
-            
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Jogo de Lençol Casal">
-                <div>
-                    <h4>Jogo de Lençol Casal</h4>
-                    <p>Percal 200 fios - Verde</p>
-                </div>
+                <div><h4>Jogo de Lençol Casal</h4><p>Percal 200 fios - Verde</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Jogo de Panelas">
-                <div>
-                    <h4>Jogo de Panelas</h4>
-                    <p>Ceramic Life Granada Vanilla - 5 Peças</p>
-                </div>
+                <div><h4>Jogo de Panelas</h4><p>Ceramic Life Granada Vanilla</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Airfryer Oven">
-                <div>
-                    <h4>Airfryer Oven</h4>
-                    <p>12L Digital</p>
-                </div>
+                <div><h4>Airfryer Oven</h4><p>12L Digital</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Aparelho de Jantar">
-                <div>
-                    <h4>Aparelho de Jantar</h4>
-                    <p>20 Peças</p>
-                </div>
+                <div><h4>Aparelho de Jantar</h4><p>20 Peças</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Jogo de Copos">
-                <div>
-                    <h4>Jogo de Copos</h4>
-                    <p>6 Peças</p>
-                </div>
+                <div><h4>Jogo de Copos</h4><p>6 Peças</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
             <div class="card-produto">
                 <img src="https://via.placeholder.com/200" alt="Liquidificador">
-                <div>
-                    <h4>Liquidificador</h4>
-                    <p>Turbo 900W</p>
-                </div>
+                <div><h4>Liquidificador</h4><p>Turbo 900W</p></div>
                 <button class="btn-presente">Quero este presente</button>
             </div>
-
         </div>
 
         <footer>
             <p>Sua presença já é o nosso maior presente!<br>Obrigado por fazer parte deste momento especial.</p>
             <div class="rodape-barra">Vanessa & Douglas 🤍</div>
         </footer>
-
     </div>
 
     <script>
